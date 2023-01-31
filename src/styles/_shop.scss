@@ -1,0 +1,39 @@
+.shop-page {
+    min-height: 100vh;
+    padding: 2rem 10rem;
+
+    .collection-category {
+        padding-bottom: 2rem;
+
+        .item-list {
+            padding-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            justify-content: center;
+
+            .collection-item {
+                background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+                border-radius: 20px;
+
+                img {
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                    width: 100%;
+                    height: 50vh;
+                    object-fit: cover;
+                }
+
+                .item-info {
+                    padding: 1rem;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+
+            }
+
+
+        }
+    }
+}
