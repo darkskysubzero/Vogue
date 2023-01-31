@@ -23,13 +23,14 @@ const Directory = () => {
 
     const [sections, setSections] = useState(default_section_state);
 
+
     return (
         <div className="directory-menu">
             {
                 <MagicGrid
                     items={sections.length}
                     static={false}
-                    gutter={30}
+                    gutter={0}
                     animate={true}
                     center={false}
                     useMin={true}
