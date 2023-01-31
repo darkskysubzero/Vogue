@@ -3,10 +3,16 @@
     .directory-menu {
         min-height: 100vh;
         padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        justify-content: center;
+        gap: 2rem;
+        cursor: pointer;
 
         .item {
-            min-height: 400px;
-            min-width: 400px;
+            border-radius: 20px;
+            min-height: 500px;
+            min-width: 300px;
             position: relative;
             display: flex;
             justify-content: center;
@@ -27,7 +33,7 @@
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: cover;
-                transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+                transition: all 0.3s ease;
                 cursor: pointer;
 
             }
@@ -38,7 +44,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+                transition: all 0.3s ease;
                 background-color: rgba(0, 0, 0, 0.587);
                 padding: 1rem;
             }

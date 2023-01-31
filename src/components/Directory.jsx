@@ -1,5 +1,4 @@
 import React from 'react';
-import MagicGrid from 'react-magic-grid';
 import { useState } from 'react';
 import image1 from "../assets/section-images/1.jpg";
 import image2 from "../assets/section-images/2.jpg";
@@ -26,21 +25,10 @@ const Directory = () => {
 
     return (
         <div className="directory-menu">
-            {
-                <MagicGrid
-                    items={sections.length}
-                    static={false}
-                    gutter={0}
-                    animate={true}
-                    center={false}
-                    useMin={true}
-                >
-                    {sections.map(({ id, title, imageURL, size }) => {
-                        return <MenuItem key={id} title={title} imageURL={imageURL} size={size} />
-                    })}
-                </MagicGrid>
+            {sections.map(({ id, title, imageURL, size }) => {
+                return <MenuItem key={id} title={title} imageURL={imageURL} size={size} />
+            })}
 
-            }
         </div>
     );
 }

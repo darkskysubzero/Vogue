@@ -26,6 +26,7 @@
             font-size: 2rem;
             color: #000;
             transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+            cursor: pointer;
 
             &:hover {
                 transform: translateY(5px);

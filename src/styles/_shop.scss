@@ -1,6 +1,5 @@
 .shop-page {
     min-height: 100vh;
-    padding: 2rem 10rem;
 
     .collection-category {
         padding-bottom: 2rem;
@@ -9,11 +8,11 @@
             padding-top: 2rem;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
+            gap: 2rem;
             justify-content: center;
 
             .collection-item {
-                background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+                background-image: linear-gradient(to top, #ffffff 0%, #525252 100%);
                 border-radius: 20px;
 
                 img {
