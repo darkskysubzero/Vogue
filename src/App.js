@@ -17,13 +17,11 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-
     const auth = getAuth();
     const unsub = auth.onAuthStateChanged(user => {
       if (user) {
         setCurrentUser(user);
         navigate("/");
-
       } else {
         setCurrentUser(null);
       }

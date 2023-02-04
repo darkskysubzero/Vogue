@@ -10,6 +10,7 @@ const Header = (props) => {
     const handleSignOut = () => {
         const auth = getAuth();
         auth.signOut();
+        console.log("Signed out successfully!")
     }
 
     return (
