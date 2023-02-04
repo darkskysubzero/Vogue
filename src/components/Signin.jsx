@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { TextField, Button } from '@mui/material';
 
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword } from "firebase/auth";
 import { doc, getDoc, serverTimestamp, setDoc } from "firebase/firestore";
 import { db } from "../firebase/firebase.util";
 
@@ -15,10 +15,19 @@ const Signin = () => {
     }
     const [login, setLogin] = useState(defaultState);
 
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
         e.preventDefault();
-        console.log("logging in!");
-        setLogin(defaultState);
+        const { email, password } = login;
+        try {
+            const auth = getAuth();
+            const result = await signInWithEmailAndPassword(auth, email, password);
+            console.log(result);
+            setLogin(defaultState);
+            console.log("Signed in successfully!");
+        } catch (e) {
+            setLogin(defaultState);
+            console.log(e.message);
+        }
     }
 
     const handleChange = e => {
